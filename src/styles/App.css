@@ -4,6 +4,11 @@
   text-align: center;
   color: white;
 }
+@media only screen and (max-width: 280px) {
+  .App {
+    min-height:653px;
+  }
+}
 
 p {
   margin:0;
@@ -26,6 +31,11 @@ header{
   flex-direction: row;
   justify-content: space-between;
   padding: 10px 10px 10px 10px;
+
+/* This doesn't work. Have to move the media query out and directly below   
+  @media only screen and (max-width:280px){
+    padding:0;    
+  } */
 }
 
 .title {
@@ -34,8 +44,32 @@ header{
   font-weight: bold;
   color: white;
 }
+.title::before{
+  content: "😇 ";   
+}
 
 .subtitle {
+  font-size: 25px;
+  color: white;
+}
+@media only screen and (max-width: 540px) {
+  header {
+    padding:0 0 15px 0;
+  }
+  .title {
+    font-size: 25px;
+  }
+  .title::before{
+    content: "😇\a";
+    white-space:pre;
+  }
+  .subtitle {
+    padding-top:15px;
+    font-size: 18px;
+  }
+}
+
+.subtitle1 {
   font-size: 25px;
   color: white;
 }
@@ -61,6 +95,12 @@ header{
   margin-top: 10px;
 }
 
+@media only screen and (max-width: 540px) {
+  .right {
+    padding:0 0 0 20px;
+  }  
+}
+
 .content-container {
   background-color: #a200d6;
 }
@@ -82,11 +122,12 @@ header{
   display: flex;
   flex-direction: column;
   margin: auto;
-  max-width: 550px;
+  max-width: 550px;  
 }
 
 .connect-wallet-container img {
-  padding-bottom: 20px;
+  height: 300px;
+  padding-bottom: 20px;  
 }
 
 .connect-wallet-button {
@@ -101,6 +142,21 @@ header{
   );
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
+}
+@media only screen and (max-width: 280px) {
+  .cta-button {
+    padding: 5px 25px;
+    margin: 0 auto
+  }
+  
+  .connect-wallet-container {
+    max-width: 80%;
+  }   
+}
+
+.mint-container {
+  background-color: #181818;  
+  margin-bottom:-2px;
 }
 
 .mint-button {
@@ -145,6 +201,7 @@ header{
   justify-content: center;
   align-items: center;
   padding-bottom: 30px;
+  background-color: #181818;  
 }
 
 .twitter-logo {
@@ -164,6 +221,7 @@ header{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #181818;
 }
 
 input{
@@ -176,7 +234,13 @@ input{
   width: 400px;
   margin-bottom: 10px;
   padding: 10px 20px;
-  text-align: center;
+  text-align: center; 
+}
+@media only screen and (max-width: 500px) {
+  input {
+    width:80%;
+    font-size: 20px;
+  }   
 }
 
 input::placeholder {
@@ -195,6 +259,7 @@ input:focus {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+/*   width:70% */
 
 }
 
@@ -208,6 +273,7 @@ input:focus {
   margin: 0;  
   padding: 0;
   margin-bottom: 13px;
+/*   width:30%; */
 }
 
 .mint-list {
@@ -217,6 +283,7 @@ input:focus {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  background-color: #181818;
 }
 
 .mint-item {

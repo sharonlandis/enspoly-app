@@ -223,7 +223,6 @@ const App = () => {
     }
   }
 
-  //<img src="https://media.giphy.com/media/3ohhwytHcusSCXXOUg/giphy.gif" alt="Ninja gif" />
   const renderNotConnectedContainer = () => (
     <div className="connect-wallet-container">      
       <img src="https://media.giphy.com/media/iem9jG9ycjPg0VNF15/giphy.gif/giphy.gif" alt="Angel gif" />
@@ -289,7 +288,7 @@ const App = () => {
     if (currentAccount && mints.length > 0) {
       return (
         <div className="mint-container">
-          <p className="subtitle"> Recently minted domains!</p>
+          <p className="subtitle1"> Recently minted domains!</p>
           <div className="mint-list">
             { mints.map((mint, index) => {
               return (
@@ -337,9 +336,9 @@ const App = () => {
       <div className="container">
         <div className="header-container">
           <header>
-            <div className="left">
-            <p className="title">😇 Angel Name Service</p>
-            <p className="subtitle">Your immortal API on the blockchain!</p>
+            <div className="left">         
+              <p className="title">Angel Name Service</p>
+              <p className="subtitle">Your immortal API on the blockchain!</p>
             </div>
             {/* Display a logo and wallet connection status*/}
             <div className="right">
